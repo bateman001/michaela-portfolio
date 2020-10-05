@@ -42,7 +42,7 @@ export default function Modal(props){
     const visibility = () => {
         setVisible(!visible)
     }
-    console.log( props.name,' is visible: ', visible)
+
     return(
         <div>
         <div className='modal'>
@@ -58,7 +58,7 @@ export default function Modal(props){
         </div>
         {slide.map(
             ({item, key, props}) => {
-                return item && <animated.div style={props} className='slide-up'>
+                return item && <animated.div key={key} style={props} className='slide-up'>
                     <SlideUp list={list} />
                 </animated.div>
             }

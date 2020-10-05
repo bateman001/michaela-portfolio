@@ -1,8 +1,8 @@
-import music from './styling/images/nu-strut.png';
-import quiz from './styling/images/hiphopquiz.png';
-import trip from './styling/images/Screen1.png';
-import noteful from './styling/images/noteful.png';
-import bakery from './styling/images/bakery.png'
+import music from './styling/images/nu-strut-min.png';
+import quiz from './styling/images/hiphopquiz-min.png';
+import trip from './styling/images/Screen1-min.png';
+import noteful from './styling/images/noteful-min.png';
+import bakery from './styling/images/bakery-min.png'
 
 const DATA = {
   PROJECTS: [

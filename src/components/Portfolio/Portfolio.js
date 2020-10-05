@@ -7,7 +7,7 @@ import { Link } from 'react-scroll'
 export default function Portfolio(){
 
     return(
-    <div>
+    <div className='portoflio'>
         <section className='portfolio-intro'>
             <div className='portfolio-bar'>
             <Link activeClass='active' to='portfolio-img' smooth={true} spy={true} duration={1000}>
