@@ -211,14 +211,6 @@ li{
 	font-size: 30px;
 }
 
-.my-pic{
-	background-image: url('./styling/images/my-portrait.JPEG'); /*DSC04251.JPEG DSC04254.JPEG*/
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
-
 .active{
 	background-color: #B6C1E4;
 }
@@ -369,6 +361,19 @@ li{
 		transform: translate(-25%, -45%);
 		z-index: 2;
 	}
+
+	.my-pic{
+		background-image: url('./styling/images/my-portrait.JPEG'); /*DSC04251.JPEG DSC04254.JPEG*/
+		background-size: 800px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		
+		@media (max-width: @iphone-screen) {
+			background-attachment: scroll;
+		}
+	}
+	
 	
 	/* 
 
@@ -723,6 +728,15 @@ li{
 		font-size: 55px;
 	}
 
+	.my-pic{
+		background-image: url('./styling/images/my-portrait.JPEG'); /*DSC04251.JPEG DSC04254.JPEG*/
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+	
+
 }
 
 @media only screen and (min-width: 801px){
@@ -931,6 +945,14 @@ li{
 	.tech-list li{
 		font-size: 20px;
 	}
+
+	.my-pic{
+		background-image: url('./styling/images/my-portrait.JPEG'); /*DSC04251.JPEG DSC04254.JPEG*/
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}	
 	
 	footer{
 		height: 100vh;
