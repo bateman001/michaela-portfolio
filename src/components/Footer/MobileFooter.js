@@ -1,21 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react'
+import  Fade from 'react-reveal'
 import { FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
-import Fade from 'react-reveal';
 import { Link } from 'react-scroll'
 
-import Parallax from '../MovingBackground/Parallax'
-
-const Footer = () => {
-
-    const [filter, setFilter] = useState('overlay2')
-    const changeFilter = () => filter === 'overlay2'? setFilter('lighten2') : setFilter('overlay2')
+export default function MobileFooter(){
 
     return(
-        <section className='aboutMe'>
-        <header className={filter} onClick={() => changeFilter()}>
-        <Fade top delay={1000} duration={2000}>
-          <h1>Contact</h1>
-        </Fade>
+        <>
+        <section className='mobile-header'>
+        <header className='background-1 overlay2'>
+            <Fade top delay={1000} duration={2000}>
+            <h1>Contact</h1>
+            </Fade>
         </header>
 
         <div className='contact'>
@@ -32,13 +28,9 @@ const Footer = () => {
                 </a>
             </div>
         </div>
-        <div className="parallax">
-            <Parallax />
-        </div>
-        <header className={`bottom-window ${filter}`} onClick={() => changeFilter()}></header> 
-    </section>
+        <section className='background-1 overlay2'></section>
+        </section>
+
+        </>
     )
 }
-
-export default Footer;
-

@@ -15,6 +15,7 @@ const Header = () => {
           <h1>Who I Am</h1>
         </Fade>
         </header>
+
         <div className="aboutMe-paragraph">
         <p>Constantly growing, Constantly coding. I am a web developer with a love for color, light animation, and functionality. Lets work together!</p>  
         <Link className='aboutMe-button' to='/contact'>contact</Link>        
@@ -22,6 +23,7 @@ const Header = () => {
         <div className="parallax">
         <Parallax />
         </div>
+        
         <header className={`bottom-window ${filter}`} onClick={() => changeFilter()}></header> 
     </section>
     )

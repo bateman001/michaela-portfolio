@@ -38,7 +38,7 @@ const DATA = {
       name: 'Day Tripper',
       live: 'https://bateman001.github.io/DayTripper/',
       repo: 'https://github.com/bateman001/DayTripper',
-      tech: ['Jquery/JavaScript', 'HTML', 'CSS', 'RestFul API' ],
+      tech: ['Jquery', 'JavaScript', 'HTML', 'CSS', 'RestFul API' ],
       description: 'An app using multiple APIs to give the user their optimal road trip experience. The weather, the route, and restaurants all in one click!',
       key: 4
     },
@@ -47,7 +47,7 @@ const DATA = {
       name: 'Hip Hop Quiz',
       live: 'https://bateman001.github.io/finalQuizApp/',
       repo: 'https://github.com/bateman001/finalQuizApp',
-      tech: ['Jquery/JavaScript', 'HTML', 'CSS' ],
+      tech: ['Jquery', 'JavaScript', 'HTML', 'CSS' ],
       description: 'A quiz which tests your modern hip-hop knowledge!',
       key: 5
     }, 

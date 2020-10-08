@@ -55,16 +55,16 @@ const Menu = (props) => {
   return (
     <ul className='menu-nav'>
       {transition.map((animation, index) =>
+        <Link to={list[index].route}>
         <animated.li 
           key={index}
           style={animation}
           className='menu-list-item'
           onClick={() => props.setClicked(false)}
           >
-          <Link to={list[index].route}>
             {list[index].name}
-          </Link>
         </animated.li>
+        </Link>
       )}
     </ul>
   )

@@ -87,7 +87,6 @@ header{
 
 h1{
 	font-family: h1;
-	font-size: 60px;
 	letter-spacing: 5px;
 }
 
@@ -215,7 +214,48 @@ li{
 	background-color: #B6C1E4;
 }
 
+form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	width: 65vw;
+	height: 100vh;
+	padding: 30px;
+}
+
+input, textarea{
+	width: 60vw;
+	padding: 5px;
+	background-color: #b6c1e4b4;
+	border: 1px solid white;
+	border-radius: 2px;
+
+}
+
+textarea{
+	height: 40vh;
+}
+
+label{
+	align-self: flex-start;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	font-family: p;
+	font-size: 20px;
+}
+
+.icon-container{
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	margin: 20px;
+}
+
 @media only screen and (max-width: 600px) {
+	h1{
+		font-size: 60px;
+	}
 	.mobile-header{
 		display: flex;
 		flex-direction: column;
@@ -223,13 +263,14 @@ li{
 		z-index: 1;
 	}	
 
-	.overlay1{
+	.overlay1, .overlay2{
 		background-position: center;
 		background-size: cover;
 		background-attachment: fixed;
 		text-align: center;
 	}
 	
+
 	.background-1{
 		background-color: #B6C1E4;
 	}
@@ -239,7 +280,8 @@ li{
 	}
 
 	.menu-nav{
-		width: 20vw;
+		width: 60vw;
+		height: 50vw;
 	}	
 
 	a{
@@ -251,7 +293,7 @@ li{
 		transition-duration: 0.4s;
 	}
 
-	.aboutMe-paragraph{
+	.aboutMe-paragraph, .contact{
 		text-align: center;
 		position: absolute;
 		z-index: 1;
@@ -319,7 +361,7 @@ li{
 
 	.slide-up-list{
 		margin-top: 10px;
-		width: 20vw;
+		width: 30vw;
 		height: 25vh;
 	}	
 
@@ -365,16 +407,58 @@ li{
 	.my-pic{
 		background-image: url('./styling/images/my-portrait.JPEG'); /*DSC04251.JPEG DSC04254.JPEG*/
 		background-size: 800px;
-		background-position: center;
+		background-position: top;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
-		
+
 		@media (max-width: @iphone-screen) {
 			background-attachment: scroll;
 		}
 	}
 	
+	/* .contact{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		z-index: 1;
+		background-color: white;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 10px;
+		font-size: 20px;
+		text-align: center;
+		width: 100vw;
+		height: auto;
+	} */
 	
+	.react-icons{
+		font-size: 50px;
+		color: #B6C1E4;
+		transition-duration: 0.4s;
+	}
+
+	.contact-window{
+		width: 100vw;
+		height: 100vh;
+		margin: auto;
+		background-color: #B6C1E4;
+	
+	}
+
+	.submit{
+		width: 50%;
+		height: 20%;
+		transition-duration: 0.4s;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		border: 1px solid white;
+		color: white;
+		padding: 30px;
+		background-color: #B6C1E4;
+	}
+
 	/* 
 
 
@@ -500,6 +584,7 @@ li{
 
 @media only screen and (min-width: 601px) and (max-width: 800px){
 
+
 	.flex{
 		display: flex;
 		justify-content: center;
@@ -519,16 +604,20 @@ li{
 		margin: 0;
 		padding: 0;
 		text-align: center;
-		color: white;
+		color: black;
 	}
-			
+	
+	h1{
+		font-size: 80px;
+	}
+
 	h3{
 		font-family: h1;
 		font-size: 25px;
 		letter-spacing: 5px;
 	}
 	.menu-nav{
-		width: 10vw;
+		width: 50vw;
 	}	
 	
 	.aboutMe{
@@ -569,6 +658,10 @@ li{
 		padding: 10px;
 		font-size: 25px;
 		text-align: center;
+	}
+
+	.contact p{
+		padding: 10px;
 	}
 
 	.aboutMe-button:hover{
@@ -720,12 +813,12 @@ li{
 	.react-icons{
 		font-size: 50px;
 		color: #B6C1E4;
-		margin: 20px;
 		transition-duration: 0.4s;
 	}
+
 	.react-icons:hover{
 		color: rgb(180, 153, 233);
-		font-size: 55px;
+		transform: scale(1.2);
 	}
 
 	.my-pic{
@@ -736,6 +829,30 @@ li{
 		background-attachment: fixed;
 	}
 	
+	.submit{
+		width: 20%;
+		transition-duration: 0.4s;
+		margin: 30px;
+		border: 1px solid white;
+		color: white;
+		padding: 10px;
+		background-color: #B6C1E4;
+	}
+
+	.submit:hover{
+		cursor: pointer;
+		background-color: white;
+		color: black;
+	}
+
+	.contact-window{
+		width: 100vw;
+		height: 100vh;
+		margin: auto;
+		background-color: #B6C1E4;
+	
+	}
+
 
 }
 
@@ -759,9 +876,14 @@ li{
 		margin: 0;
 		padding: 0;
 		text-align: center;
-		color: white;
+		color: black;
+		/* border: 1px solid blue; */
 	}
-				
+	
+	h1{
+		font-size: 80px;
+	}
+
 	h3{
 		font-family: h1;
 		font-size: 40px;
@@ -769,7 +891,7 @@ li{
 	}
 
 	.menu-nav{
-		width: 10vw;
+		width: 30vw;
 	}
 
 	.aboutMe{
@@ -810,6 +932,9 @@ li{
 		font-size: 25px;
 	}
 	
+	.contact p{
+		padding: 10px;
+	}
 	.aboutMe-button:hover{
 		cursor: pointer;
 		background-color: #B6C1E4;
@@ -868,6 +993,15 @@ li{
 		margin-top: 30px;
 		background-color: #B6C1E4;
 	}
+
+	.contact-window{
+		width: 100vw;
+		height: 100vh;
+		margin: auto;
+		background-color: #B6C1E4;
+	
+	}
+
 	.tech-list{
 		overflow: scroll;
 		height: 60vh;
@@ -963,7 +1097,7 @@ li{
 	.react-icons{
 		font-size: 50px;
 		color: #B6C1E4;
-		margin: 20px;
+		padding: 20px;
 		transition-duration: 0.4s;
 	}
 	.react-icons:hover{
@@ -971,4 +1105,19 @@ li{
 		transform: scale(1.2);
 	}
 	
+	.submit{
+		width: 20%;
+		transition-duration: 0.4s;
+		margin: 30px;
+		border: 1px solid white;
+		color: white;
+		padding: 10px;
+		background-color: #B6C1E4;
+	}
+
+	.submit:hover{
+		cursor: pointer;
+		background-color: white;
+		color: black;
+	}
 }

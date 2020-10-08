@@ -1,8 +1,20 @@
 import React from 'react'
 import Footer from '../components/Footer/Footer';
+import MobileFooter from '../components/Footer/MobileFooter'
+import ContactForm from '../components/Footer/ContactForm'
+import withSizes from 'react-sizes'
 
-export default function Contact() {
+function Contact({ isMobile }) {
     return(
-        <Footer />
+        <>
+        {isMobile ? <MobileFooter /> : <Footer />}
+        <ContactForm />
+        </>
     )
 }
+
+const mapSizesToProps = ({ width }) => ({
+    isMobile: width < 600,
+  })
+  
+  export default withSizes(mapSizesToProps)(Contact)
