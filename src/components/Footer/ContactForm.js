@@ -4,9 +4,7 @@ import { Waypoint } from 'react-waypoint'
 import { animated, useTransition, config } from 'react-spring'
 
 export default function ContactForm(){
-    const [message, setMessage] = useState({})
     const [form, showForm] = useState(false)
-
 
     const slideDown = useTransition(form, null, {
         from: {
@@ -27,35 +25,17 @@ export default function ContactForm(){
         config: config.slow
     })
 
-    const changeMessage = (e) => {
-        const {id, value} = e.target
-
-        return setMessage({...message, [id]: value})
-    }
 
     const sendEmail = (e) => {
         e.preventDefault()
-
-        let templateParams = {
-            subject: message.subject,
-            from_name: message.name,
-            message_html: message.message,
-            user_email: message.email,
-           }
       
-           emailjs.init(process.env.REACT_APP_USER_ID);
-
-           emailjs.send(
-            'gmail',
-             process.env.REACT_APP_TEMPLATE_ID,
-             templateParams,
-           ).then(res => res.status(200) ? resetForm() : alert('something went wrong'))
-
+           emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
+           .then((result) => {
+               console.log(result.text);
+           }, (error) => {
+               console.log(error.text);
+           });
         }
-
-    const resetForm = () => {
-        return setMessage({})
-    }
 
     return(
         <Waypoint onEnter={() => showForm(true)} onLeave={() => showForm(false)} bottomOffset='50px'>
@@ -64,17 +44,17 @@ export default function ContactForm(){
         {slideDown.map(({item, key, props}) => {
             return item && <animated.form key={key} style={props} onSubmit={(e) => sendEmail(e)}>
 
-            <label htmlFor='name'>Name</label>
-            <input type='text' id='name' onChange={(e) => changeMessage(e)} required/>
+            <label htmlFor='from_name'>Name</label>
+            <input type='text' name='from_name' required/>
 
-            <label htmlFor='email'>Email</label>
-            <input type="email" id="email" onChange={(e) => changeMessage(e)} required/>
+            <label htmlFor='user_email'>Email</label>
+            <input type="email" name="user_email" required/>
 
             <label htmlFor='subject'>Subject</label>
-            <input type='text' id='subject' onChange={(e) => changeMessage(e)} required/>
+            <input type='text' name='subject' required/>
 
-            <label htmlFor='message'>Message</label>
-            <textarea id='message' onChange={(e) => changeMessage(e)} required/>
+            <label htmlFor='message_html'>Message</label>
+            <textarea name='message_html' required/>
 
             <input className='submit' type='submit' value='send' />
         </animated.form>  
