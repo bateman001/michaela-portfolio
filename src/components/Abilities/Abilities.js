@@ -25,9 +25,8 @@ const Abilities = ({ isMobile }) => {
             <div className='tech'>
             {data.techSkills.map((x, i) => {
                 return <Buttons key={i} skill={x} selected={selected} setSelected={setSelected}/>
-            })}
+            })} 
             </div>
-
         </section>
         
         )

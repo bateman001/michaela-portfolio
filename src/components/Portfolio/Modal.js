@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { useSpring, animated, useTransition} from 'react-spring';
 import { Waypoint } from 'react-waypoint'
-
+import { IoIosClose } from 'react-icons/io'
 export default function Modal(props){
     const [visible, setVisible] = useState(false)
-
     const [open, set] = useState(false)
     const list = {
                 description: props.description,
@@ -52,14 +51,14 @@ export default function Modal(props){
             className='modal-button' 
             onClick={() => showInfo()}
             key={props.i}>                    
-                <p>About</p>
+                <p>About This App</p>
             </animated.div>
         </Waypoint>
         </div>
         {slide.map(
             ({item, key, props}) => {
                 return item && <animated.div key={key} style={props} className='slide-up'>
-                    <SlideUp list={list} />
+                    <SlideUp list={list} showInfo={showInfo}/>
                 </animated.div>
             }
         )}
@@ -70,6 +69,7 @@ export default function Modal(props){
 const SlideUp = (props) => {
    return (
        <div className='slide-up-modal'>
+        <IoIosClose className='close-icon' onClick={() => props.showInfo()} />
         <div className='slide-up-par'>
             <a href={props.list.repo} target='_blank' rel="noopener noreferrer">Repo</a> / <a href={props.list.live} target='_blank' rel="noopener noreferrer">Live</a>
         </div>

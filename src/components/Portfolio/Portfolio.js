@@ -18,7 +18,7 @@ export default function Portfolio(){
                 })}
             </div>      
         <div id='portfolio-img' className='portfolio-img my-pic'>
-            <div>
+            <div className='portfolio-text'>
                 <h1>My Portfolio</h1>
                 <p>See what I'm made of</p>                
             </div>

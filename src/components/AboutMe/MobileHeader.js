@@ -13,7 +13,10 @@ export default function MobileHeader(){
 
         <div className="aboutMe-paragraph">
             <p>Constantly growing, Constantly coding. I am a web developer with a love for color, light animation, and functionality. Lets work together!</p>  
-            <Link className='aboutMe-button' to='/contact'>contact</Link>        
+            <div>
+                <Link className='aboutMe-button' to='/contact'>Contact</Link> 
+                <Link className='aboutMe-button' to='/portfolio'>Portfolio</Link>       
+            </div>
         </div>
         <section className='background-1 overlay1'></section>
         </section>
