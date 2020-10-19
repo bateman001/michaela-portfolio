@@ -12,7 +12,7 @@ const Footer = () => {
 
     return(
         <section className='aboutMe'>
-        <header className={filter} onClick={() => changeFilter()}>
+        <header className='lighten2'>
         <Fade top delay={1000} duration={2000}>
           <h1>Contact</h1>
         </Fade>
@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="parallax">
             <Parallax />
         </div>
-        <header className={`bottom-window ${filter}`} onClick={() => changeFilter()}></header> 
+        <header className={`bottom-window lighten2`} onClick={() => changeFilter()}></header> 
     </section>
     )
 }

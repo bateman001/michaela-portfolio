@@ -5,25 +5,7 @@ import noteful from './styling/images/noteful-min.png';
 import bakery from './styling/images/bakery-min.png'
 
 const DATA = {
-  PROJECTS: [
-    {
-      url: bakery,
-      name: `Bryn's Sweet Creations`,
-      live: 'https://bryns-bakery.vercel.app/',
-      repo: 'https://github.com/bateman001/bryns-bakery',
-      tech: ['React', 'React Hooks', 'React Spring', 'With Sizes', 'Vercel', 'Node.js', 'Express', 'PostgreSQL', 'Knex', 'Heroku'],
-      description: 'A place to order your favorite treats from the cutest bakery',
-      key: 1
-    },
-    {
-      url: music,
-      name: 'Nu Strut',
-      live: 'https://nu-strut.vercel.app/',
-      repo: 'https://github.com/bateman001/nu-strut',
-      tech: ['React', 'React Hooks', 'React-Spring', 'WayPoint', 'Vercel', 'CSS' ],
-      description: 'Inspired by Childish Gambinos website, this artist wanted a place to deliver his newest music first for free to his listeners',
-      key: 2
-    },
+personal: [
     {
       url: noteful,
       name: 'Noteful',
@@ -51,6 +33,26 @@ const DATA = {
       description: 'A quiz which tests your modern hip-hop knowledge!',
       key: 5
     }, 
+],
+freelance:[
+  {
+    url: bakery,
+    name: `Bryn's Sweet Creations`,
+    live: 'https://bryns-bakery.vercel.app/',
+    repo: 'https://github.com/bateman001/bryns-bakery',
+    tech: ['React', 'React Hooks', 'React Spring', 'With Sizes', 'Vercel', 'Node.js', 'Express', 'PostgreSQL', 'Knex', 'Heroku'],
+    description: 'A place to order your favorite treats from the cutest bakery',
+    key: 1
+  },
+  {
+    url: music,
+    name: 'Nu Strut',
+    live: 'https://nu-strut.vercel.app/',
+    repo: 'https://github.com/bateman001/nu-strut',
+    tech: ['React', 'React Hooks', 'React-Spring', 'WayPoint', 'Vercel', 'CSS' ],
+    description: 'Inspired by Childish Gambinos website, this artist wanted a place to deliver his newest music first for free to his listeners',
+    key: 2
+  },
 ],
 techSkills: [
    {

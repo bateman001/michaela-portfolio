@@ -6,6 +6,7 @@ import PortfolioRoute from './routes/PortfolioRoute';
 import {IoIosMenu} from 'react-icons/io';
 import {useTrail, animated} from 'react-spring';
 import {Route, Switch, Link} from 'react-router-dom';
+import PortfolioOptions from './routes/PortfolioOptions';
 
 const App = () => {
   const [clicked, setClicked] = useState(false)
@@ -17,11 +18,8 @@ const App = () => {
       
     <Switch>
       <Route exact path='/' children={(rProps) => <Intro {...rProps}/>}/>
-
-      <Route exact path='/portfolio'>
-        <PortfolioRoute />
-      </Route>
-      
+      <Route exact path='/portfolio' children={(rProps) => <PortfolioOptions {...rProps}/>}/>
+      <Route exact path='/portfolio/:id' children={(rProps) => <PortfolioRoute id={rProps.match.params.id}/>}/>
       <Route exact path='/contact'>
         <Contact />
       </Route>
@@ -39,11 +37,11 @@ const Menu = (props) => {
     }, 
     {
       name: 'Portfolio',
-      route: 'portfolio'
+      route: '/portfolio'
     },
     {
       name: 'Contact',
-      route: 'contact'
+      route: '/contact'
     } 
   ]
 
